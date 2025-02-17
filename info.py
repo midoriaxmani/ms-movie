@@ -22,6 +22,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 log_channel = environ.get('LOG_CHANNEL', '')
 LOG_CHANNEL = int(log_channel) if log_channel and id_pattern.search(log_channel) else None
 
+# Force Subscription Channel
+auth_channel = environ.get('AUTH_CHANNEL', '')  # Get the AUTH_CHANNEL from environment
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+log_channel = environ.get('LOG_CHANNEL', '')
+LOG_CHANNEL = int(log_channel) if log_channel and id_pattern.search(log_channel) else None
+
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled(environ.get('USE_CAPTION_FILTER', "True"), True)
