@@ -70,6 +70,7 @@ MAX_LIST_ELM = int(environ.get("MAX_LIST_ELM", "10"))  # Default to 10 if not se
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL) or 0)
 PROTECT_CONTENT = is_enabled(environ.get('PROTECT_CONTENT', "True"), True)
 PUBLIC_FILE_STORE = is_enabled(environ.get('PUBLIC_FILE_STORE', "True"), True)
+IMDB = is_enabled(environ.get('IMDB', "False"), False)
 
 LOG_STR = "Current Customized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing IMDb details for your queries.\n" if is_enabled(environ.get('IMDB', "False"), False) else "IMDb Results are disabled.\n")
